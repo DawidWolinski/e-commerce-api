@@ -10,7 +10,7 @@ app = Flask(__name__)
 load_dotenv()
 
 # Database
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{environ.get("DATABASE_USERNAME")}:{environ.get("DATABASE_PASSWORD")}@{environ.get("DATABASE_HOSTNAME")}/{environ.get("DATABASE_NAME")}'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{environ.get("DATABASE_USERNAME")}:{environ.get("DATABASE_PASSWORD")}@{environ.get("DATABASE_HOSTNAME")}:{environ.get("DATABASE_PORT")}/{environ.get("DATABASE_NAME")}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Init db
