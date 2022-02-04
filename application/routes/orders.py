@@ -1,10 +1,10 @@
 from operator import and_
 from flask import Blueprint, request, jsonify
-from oauth2 import token_required
-from schemas import order_schema, order_product_schema, orders_product_schema
-from models import Order, Product
-from database import db
-from utils import get_filter_expressions, get_sorting_parameters
+from ..oauth2 import token_required
+from ..schemas import order_schema, order_product_schema, orders_product_schema
+from ..models import Order, Product
+from ..database import db
+from ..utils import get_filter_expressions, get_sorting_parameters
 from sqlalchemy import and_
 
 

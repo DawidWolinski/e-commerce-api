@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify
-from schemas import login_schema
-from utils import verify_password
-from models import User
-from oauth2 import create_access_token
+from ..schemas import login_schema
+from ..utils import verify_password
+from ..models import User
+from ..oauth2 import create_access_token
 
 
 login = Blueprint('login', __name__)

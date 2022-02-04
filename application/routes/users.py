@@ -1,10 +1,10 @@
 from flask import Blueprint, request, jsonify
-from utils import hash_password, get_sorting_parameters, get_filter_expressions
-from schemas import user_schema, products_schema, user_schema_password,\
+from ..utils import hash_password, get_sorting_parameters, get_filter_expressions
+from ..schemas import user_schema, products_schema, user_schema_password,\
 password_update_schema, orders_product_schema, ratings_order_product_schema
-from models import User, Product, Order, Rating
-from database import db
-from oauth2 import token_required
+from ..models import User, Product, Order, Rating
+from ..database import db
+from ..oauth2 import token_required
 from sqlalchemy import and_
 
 

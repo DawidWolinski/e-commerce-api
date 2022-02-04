@@ -1,9 +1,9 @@
 from flask import jsonify, request
 from functools import wraps
 import jwt
-from models import User
 from datetime import datetime, timedelta
-from database import app
+from .models import User
+from .database import app
 
 
 # Credit to: https://www.geeksforgeeks.org/using-jwt-for-user-authentication-in-flask/

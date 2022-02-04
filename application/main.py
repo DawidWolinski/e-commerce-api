@@ -1,10 +1,10 @@
 from flask import jsonify
-from database import app
-from routes.users import users
-from routes.products import products
-from routes.orders import orders
-from routes.ratings import ratings
-from routes.authorisation import login
+from .database import app
+from application.routes.users import users
+from application.routes.products import products
+from application.routes.orders import orders
+from application.routes.ratings import ratings
+from application.routes.authorisation import login
 
 
 app.register_blueprint(login, url_prefix='/login')

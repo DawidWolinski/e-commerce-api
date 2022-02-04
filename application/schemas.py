@@ -1,4 +1,4 @@
-from database import app
+from .database import app
 from flask_marshmallow import Marshmallow
 from marshmallow import fields, validate
 

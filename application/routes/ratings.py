@@ -1,9 +1,9 @@
 from flask import Blueprint, request, jsonify
-from schemas import rating_schema, ratings_order_product_schema
-from models import Rating, Order
-from database import db
-from utils import get_sorting_parameters, get_filter_expressions
-from oauth2 import token_required
+from ..schemas import rating_schema, ratings_order_product_schema
+from ..models import Rating, Order
+from ..database import db
+from ..utils import get_sorting_parameters, get_filter_expressions
+from ..oauth2 import token_required
 from sqlalchemy import and_
 
 

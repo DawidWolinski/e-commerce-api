@@ -1,10 +1,10 @@
 from flask import Blueprint, request, jsonify
-from utils import get_sorting_parameters, get_filter_expressions
-from schemas import product_schema, products_schema, product_update_schema
-from models import Product, Order
-from database import db
+from ..utils import get_sorting_parameters, get_filter_expressions
+from ..schemas import product_schema, products_schema, product_update_schema
+from ..models import Product, Order
+from ..database import db
+from ..oauth2 import token_required
 from sqlalchemy import and_
-from oauth2 import token_required
 
 
 products = Blueprint('products', __name__)
