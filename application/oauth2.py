@@ -27,8 +27,8 @@ def token_required(f):
 
         token = None
 
-        if 'x-access-token' in request.headers:
-            token = request.headers['x-access-token']
+        if 'Authorization' in request.headers:
+            token = request.headers['Authorization']
 
         if token == None:
             return jsonify(error='Access token is missing')

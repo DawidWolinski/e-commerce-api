@@ -72,6 +72,9 @@ def update_product(current_user, id):
     if product.seller_id != current_user.id:
         return jsonify(error='This product belongs to the user with a different ID'), 400
 
+    if product.order != None:
+        return jsonify(error='Sold products cannot be edited'), 400
+
     data = request.get_json()
     error = product_update_schema.validate(data)
     if error:
