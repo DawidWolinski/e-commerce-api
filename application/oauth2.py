@@ -31,11 +31,11 @@ def token_required(f):
             token = request.headers['Authorization']
 
         if token == None:
-            return jsonify(error='Access token is missing')
+            return jsonify(error='Access token is missing'), 401
         
         bearer = token[0:7]
         if bearer != 'Bearer ':
-            return jsonify(error='Bearer keyword is missing')
+            return jsonify(error='Bearer keyword is missing'), 401
 
         token = token[7:(len(token))]
 
