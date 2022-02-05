@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from ..utils import get_sorting_parameters, get_filter_expressions
+from ..utils import get_sorting_parameters, get_filter_expressions, lower_case_args
 from ..schemas import product_schema, products_schema, product_update_schema
 from ..models import Product, Order
 from ..database import db
@@ -18,6 +18,8 @@ def add_product(current_user):
     if error:
         return jsonify(error=error), 400
 
+    data = lower_case_args(data)
+    
     new_product = Product(user=current_user, **data)
     db.session.add(new_product)
     db.session.commit()
@@ -80,6 +82,8 @@ def update_product(current_user, id):
     if error:
         return jsonify(error=error), 400
 
+    data = lower_case_args(data)
+    
     for key in data:
         setattr(product, key, data[key])
     

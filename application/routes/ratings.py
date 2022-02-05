@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from ..schemas import rating_schema, ratings_order_product_schema
 from ..models import Rating, Order
 from ..database import db
-from ..utils import get_sorting_parameters, get_filter_expressions
+from ..utils import get_sorting_parameters, get_filter_expressions, lower_case_args
 from ..oauth2 import token_required
 from sqlalchemy import and_
 
@@ -24,6 +24,8 @@ def add_rating(current_user):
         return jsonify(error='This order has already been rated'), 400
     elif order.buyer_id != current_user.id:
         return jsonify(error='IDs of this user and buyer are different'), 400
+    
+    data = lower_case_args(data)
     
     new_rating = Rating(order=order, **data)
     db.session.add(new_rating)

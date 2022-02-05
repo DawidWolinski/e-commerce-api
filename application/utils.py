@@ -11,6 +11,14 @@ def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
 
+def lower_case_args(data):
+    for key in data:
+        if type(data[key]) == str:
+            data[key] = data[key].lower()
+
+    return data
+
+
 # Returns sorting parameters based on HTTP query parameters
 # Sorting parameter value format in the HTTP request: category-order
 # Category represents a column in the table by which the results will be sorted

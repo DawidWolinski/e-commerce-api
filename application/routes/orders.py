@@ -4,7 +4,7 @@ from ..oauth2 import token_required
 from ..schemas import order_schema, order_product_schema, orders_product_schema
 from ..models import Order, Product
 from ..database import db
-from ..utils import get_filter_expressions, get_sorting_parameters
+from ..utils import get_filter_expressions, get_sorting_parameters, lower_case_args
 from sqlalchemy import and_
 
 
@@ -26,6 +26,7 @@ def order_product(current_user):
     if current_user.id == product.user.id:
         return jsonify(error='The IDs of buyer and seller are the same'), 400
     
+    data = lower_case_args(data)
 
     new_order = Order(user=current_user, **data)
     db.session.add(new_order)

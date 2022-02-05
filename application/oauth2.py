@@ -32,6 +32,12 @@ def token_required(f):
 
         if token == None:
             return jsonify(error='Access token is missing')
+        
+        bearer = token[0:7]
+        if bearer != 'Bearer ':
+            return jsonify(error='Bearer keyword is missing')
+
+        token = token[7:(len(token))]
 
         try:
             payload = jwt.decode(token, app.config['SECRET_KEY'], algorithms=[app.config['ALGORITHM']])
