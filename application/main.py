@@ -17,7 +17,9 @@ app.register_blueprint(ratings, url_prefix='/ratings')
 # Main page message
 @app.route('/')
 def index():
-    return jsonify(message='Hello')
+    return jsonify(message='Welcome! This is eCommerce API', 
+    documentation='https://documenter.getpostman.com/view/19248285/UVeGr62D',
+    github='https://github.com/DawidWolinski/eCommerce-API')
 
 
 if __name__ == '__main__':
