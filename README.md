@@ -4,7 +4,10 @@ eCommerce API is organised around RESTful principles. It resembles online shoppi
 
 The API was created using Flask web framework. All the data is stored in PostgreSQL database, using SQLAlchemy as an ORM system. The API and database are deployed to Heroku, a cloud platform which allows the API to be accessed from anywhere, at anytime. It is hosted at the following domain: https://api-online-shopping.herokuapp.com/
 
+
 **Documentation**
+
+https://documenter.getpostman.com/view/19248285/UVeGr62D
 
 
 **Authorization**
@@ -12,6 +15,7 @@ The API was created using Flask web framework. All the data is stored in Postgre
 eCommerce API uses an OAuth 2.0 authorization standard. In order to send POST PUT or DEL requests (except account creation and log in), the user has to first create an account and log in using valid credentials. After logging in, the user will receive an access token which will have to be provided alongside aforementioned requests.
 
 The token has to be passed in the request header together with a 'Bearer' keyword, i.e. Bearer .
+
 
 **Querying**
 
