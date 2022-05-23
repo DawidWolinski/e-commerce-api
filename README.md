@@ -3,7 +3,7 @@ About
 
 eCommerce API is organised around RESTful principles. It resembles online shopping platforms, such as Amazon, eBay or Allegro, where users can sell and buy their products.
 
-The API was created using Flask web framework. All the data is stored in PostgreSQL database, using SQLAlchemy as an ORM system. The API and database are deployed to Heroku, a cloud platform which allows the API to be accessed from anywhere, at anytime. It is hosted at the following domain: https://api-online-shopping.herokuapp.com/
+The API was created using Flask web framework. All the data is stored in PostgreSQL database, using SQLAlchemy as an ORM system. The API and database are deployed to Heroku, a cloud platform which allows the API to be accessed at anytime. It is hosted at the following domain: https://api-online-shopping.herokuapp.com/
 
 
 ## Documentation
