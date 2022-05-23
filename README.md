@@ -8,14 +8,14 @@ The API was created using Flask web framework. All the data is stored in Postgre
 
 ## Documentation
 
-https://documenter.getpostman.com/view/19248285/UVeGr62D
+Link to the Postman documentation: https://documenter.getpostman.com/view/19248285/UVeGr62D
 
 
 ## Authorization
 
 eCommerce API uses an OAuth 2.0 authorization standard. In order to send POST, PUT or DEL requests (except account creation and log in), the user has to first create an account and log in using valid credentials. After logging in, the user will receive an access token which will have to be provided alongside aforementioned requests.
 
-The token has to be passed in the request header together with a 'Bearer' keyword, i.e. Bearer {access token}
+The token has to be passed in the request header together with a 'Bearer' keyword, i.e. Bearer {acces token} (replace "{access token}")
 
 
 ## Querying
