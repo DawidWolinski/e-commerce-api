@@ -15,7 +15,7 @@ Link to the Postman documentation: https://documenter.getpostman.com/view/192482
 
 eCommerce API uses an OAuth 2.0 authorization standard. In order to send POST, PUT or DEL requests (except account creation and log in), the user has to first create an account and log in using valid credentials. After logging in, the user will receive an access token which will have to be provided alongside aforementioned requests.
 
-The token has to be passed in the request header together with a 'Bearer' keyword: Bearer <access token<blabla>>
+The token has to be passed as the request header "Authorization" together with a "Bearer" keyword: "Bearer <access token<blabla>>" (replace "<access token<blabla>>").
 
 
 ## Querying
