@@ -25,12 +25,15 @@ All GET requests, except those which return a specific item, can include query p
 **Filters**
 
 Results can be filtered based on any attribute of a specific item, except its ID. For example when querying products, the following attributes can be used as filters: "name", "price", "seller_id", "category", "new" and "posted_at".
+ 
 For example, to find products named "Wardrobe", the request would be: https://api-online-shopping.herokuapp.com/products?name=Wardrobe
 
 Additionally, the API supports range filters for numeric attributes which work by adding range type to the name of attribute. The are two range types: "from" (equal or greater than) and "to" (equal or smaller than).
+ 
 For example, to find products in the price range from 200 to 500, the request would be: https://api-online-shopping.herokuapp.com/products?price-from=200&price-to=500
 
 **Sorting**
 
 The query results can also be sorted by providing a "sorting" parameter with a value indicating the attribute to sort by and the sorting order.
+  
 For example, to list products from newest to oldest, the request would be: https://api-online-shopping.herokuapp.com/products?sorting=date-desc
