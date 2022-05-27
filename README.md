@@ -24,7 +24,7 @@ All GET requests, except those which return a specific item, can include query p
 
 **Filters**
 
-Results can be filtered based on any attribute of a specific item, except its ID. For example when querying products, the following attributes can be used as filters: "name", "price", "seller_id", "category", "new" and "posted_at".
+Results can be filtered based on any attribute of an item, except its ID. For example when querying products, the following attributes can be used as filters: "name", "price", "seller_id", "category", "new" and "posted_at".
  
 For example, to find products named "Wardrobe", the request would be: https://api-online-shopping.herokuapp.com/products?name=Wardrobe
 
