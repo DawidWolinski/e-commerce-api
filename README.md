@@ -28,7 +28,7 @@ Results can be filtered based on any attribute of an item, except its ID. For ex
  
 For example, to find products named "Wardrobe", the request would be: https://api-online-shopping.herokuapp.com/products?name=Wardrobe
 
-Additionally, the API supports range filters for numeric attributes which work by adding range type to the name of attribute. The are two range types: "from" (equal or greater than) and "to" (equal or smaller than).
+Additionally, the API supports range filters for numeric attributes which work by adding range type to the name of attribute (attribute-range). The are two range types: "from" (equal or greater than) and "to" (equal or smaller than).
  
 For example, to find products in the price range from 200 to 500, the request would be: https://api-online-shopping.herokuapp.com/products?price-from=200&price-to=500
 
