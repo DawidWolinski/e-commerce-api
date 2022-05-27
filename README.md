@@ -34,6 +34,6 @@ For example, to find products in the price range from 200 to 500, the request wo
 
 **Sorting**
 
-The query results can also be sorted by providing a "sorting" parameter with a value indicating the attribute to sort by and the sorting order.
+The query results can also be sorted by providing a "sorting" parameter with a value indicating the attribute to sort by and the sorting order (attribute-order).
   
 For example, to list products from newest to oldest, the request would be: https://api-online-shopping.herokuapp.com/products?sorting=date-desc
